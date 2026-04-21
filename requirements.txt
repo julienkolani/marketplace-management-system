@@ -1,0 +1,8 @@
+mongoengine
+unidecode
+rich
+bcrypt
+plotly
+dash
+pymongo
+pandas
