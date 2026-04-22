@@ -1,50 +1,24 @@
 # Marketplace Management System
 
-A CLI-based marketplace management application supporting three user roles: Admin, Merchant, and Client. Admins configure and manage markets on a 2D spatial grid, assigning positions to merchants. Merchants manage their product inventory and pricing. Clients browse available products, place orders, and track their transaction history. Authentication is secured with bcrypt, all data is persisted in MongoDB, and the terminal interface is rendered with the Rich library. A Plotly/Dash web dashboard provides administrators with real-time sales visualization and analytics.
+Application CLI complète de gestion de marché avec système multi-rôles, base de données MongoDB et tableau de bord de visualisation.
 
-## Features
+## Fonctionnalités
 
-- Multi-role access control: Admin, Merchant, and Client workflows
-- 2D grid-based market positioning system managed by administrators
-- MongoDB-backed data persistence for users, products, and transactions
-- Rich terminal UI for an improved CLI experience
-- Plotly/Dash dashboard for sales and inventory visualization
-- bcrypt password hashing for secure authentication
-- Transaction history tracking per client
+- Trois rôles : Admin (gestion des marchés sur grille 2D), Marchand (inventaire, promotions), Client (panier, historique)
+- Authentification bcrypt avec gestion des sessions
+- Interface terminal enrichie avec Rich (couleurs, tableaux, menus)
+- Dashboard interactif Dash/Plotly : positions des marchands, stocks, revenus, séries temporelles
 
-## Tech Stack
+## Stack technique
 
-- Python 3
-- MongoDB (via PyMongo)
-- Rich (terminal UI)
-- Plotly / Dash (visualization dashboard)
-- bcrypt (authentication)
-- Docker Compose (MongoDB service)
+- Python, MongoDB, MongoEngine
+- Rich (interface terminal)
+- Plotly, Dash (visualisation)
+- Docker, bcrypt
 
-## Setup
+## Installation
 
-1. Start the MongoDB service:
-   ```bash
-   docker compose up -d
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Run the application:
-   ```bash
-   python main.py
-   ```
-
-## Project Structure
-
-```
-Core/           # Settings and utility functions
-Database/       # MongoDB models and service layer
-Market/         # Market management logic and views
-Users/          # User management (admin, merchant, client)
-Transactions/   # Order and transaction handling
-Notifications/  # Notification services
-Visualization/  # Dash/Plotly dashboard
-docs/           # Project documentation and use cases
+```bash
+pip install -r requirements.txt
+python main.py
 ```
